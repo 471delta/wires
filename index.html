@@ -1,0 +1,946 @@
+<!-- ═══════════════════════════════════════════════════
+     index.html — Wires & Stone
+     ═══════════════════════════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bespoke, handcrafted mineral wire art by Wires & Stone. Hand-wrapped around natural raw crystals and unheated gems. Tailored by private arrangement. Alberta, Canada. Est. 2021.">
+<meta name="theme-color" content="#06020a">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Wires & Stone — Raw Mineral Art">
+<meta property="og:description" content="Artisan hand-woven wire wrapping around natural gemstones and raw mineral points. Alberta, Canada. Est. 2021.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<title>Wires & Stone — Raw Mineral Art · Alberta, Canada</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23fdf0e8'/%3E%3Cstop offset='50%25' stop-color='%23e0a2a4'/%3E%3Cstop offset='100%25' stop-color='%235a2540'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 3.4 5 8.6l7 12 7-12z' fill='none' stroke='url(%23g)' stroke-width='1.9' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════ SCROLL PROGRESS ══════════════ -->
+<div class="progress" aria-hidden="true">
+  <div class="progress__bar" id="progressBar"></div>
+</div>
+
+<!-- ══════════════ BACKGROUND ══════════════ -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-base"></div>
+  <div class="aurora"></div>
+  <span class="nebula n1"></span>
+  <span class="nebula n2"></span>
+  <span class="nebula n3"></span>
+  <div class="starfield" id="starfield"></div>
+  <div class="motes" id="motes"></div>
+  <div class="bg-vignette"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="logo" aria-label="Wires & Stone home">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f2cbc4" stroke-width="1.9"
+             stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3.4 5 8.6l7 12 7-12z"/>
+          <path d="M5 8.6h14M12 3.4 9 8.6l3 12 3-12z"/>
+        </svg>
+      </span>
+      <span class="logo-text">Wires &amp; Stone<small>Alberta, Canada • Est. 2021</small></span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#craft" data-nav="craft">The Craft</a>
+      <a href="#catalog" data-nav="catalog">Catalog Status</a>
+      <a href="#inquiry" data-nav="inquiry">Private Inquiry</a>
+      <a href="mailto:wiresandstone@gmail.com">Direct Email</a>
+    </div>
+
+    <a href="#inquiry" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20.8 8.6a5.2 5.2 0 0 0-8.8-3.5A5.2 5.2 0 0 0 3.2 8.6c0 5.3 8.8 11 8.8 11s8.8-5.7 8.8-11z"/>
+      </svg>
+      Private Commission
+    </a>
+
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Alberta, Canada • Est. 2021</p>
+
+      <h1>
+        <span class="line-mask"><span>Be elegant,</span></span>
+        <span class="line-mask"><span><em>feel elegant.</em></span></span>
+        <span class="line-mask"><span>Connect with the wires,</span></span>
+        <span class="line-mask"><span>and walk with the stones.</span></span>
+      </h1>
+
+      <span class="script">raw mineral art</span>
+
+      <p class="lede">
+        Bespoke, handcrafted mineral wire art by Wires &amp; Stone. Hand-wrapped
+        around natural raw crystals and unheated gems. Tailored by private
+        arrangement.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://instagram.com/wiresandstone" target="_blank" rel="noopener" class="btn btn-rose">
+          Visit @wiresandstone
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <a href="#inquiry" class="btn btn-line">Private Commission</a>
+      </div>
+
+      <div class="hero-meta">
+        <div><span>Raw Mineral</span><small>Art</small></div>
+        <div><span>Alberta, Canada</span><small>Est. 2021</small></div>
+        <div><span>Mineral / Wire</span><small>Scroll</small></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="astrolabe-stage">
+        <span class="astrolabe-halo"></span>
+
+        <svg class="astrolabe" viewBox="0 0 440 440" role="img" aria-label="Celestial rose gold astrolabe">
+          <defs>
+            <linearGradient id="roseMetal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   stop-color="#fdf0e8"/>
+              <stop offset="18%"  stop-color="#f2cbc4"/>
+              <stop offset="38%"  stop-color="#e0a2a4"/>
+              <stop offset="58%"  stop-color="#b76e79"/>
+              <stop offset="80%"  stop-color="#8c4a52"/>
+              <stop offset="100%" stop-color="#2e1420"/>
+            </linearGradient>
+            <linearGradient id="roseMetalRev" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#fdf0e8"/>
+              <stop offset="32%"  stop-color="#e0a2a4"/>
+              <stop offset="62%"  stop-color="#b76e79"/>
+              <stop offset="100%" stop-color="#2e1420"/>
+            </linearGradient>
+            <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%"   stop-color="#fdf0e8" stop-opacity=".9"/>
+              <stop offset="38%"  stop-color="#e0a2a4" stop-opacity=".4"/>
+              <stop offset="72%"  stop-color="#b76e79" stop-opacity=".14"/>
+              <stop offset="100%" stop-color="#5a2540" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="coreOrb" cx="0.4" cy="0.34" r="0.72">
+              <stop offset="0%"   stop-color="#fdf0e8"/>
+              <stop offset="22%"  stop-color="#f2cbc4"/>
+              <stop offset="52%"  stop-color="#b76e79"/>
+              <stop offset="82%"  stop-color="#5a2540"/>
+              <stop offset="100%" stop-color="#15081c"/>
+            </radialGradient>
+          </defs>
+
+          <circle cx="220" cy="220" r="210" fill="url(#coreGlow)"/>
+
+          <g class="ring-a">
+            <circle cx="220" cy="220" r="200" fill="none"
+                    stroke="url(#roseMetal)" stroke-width=".9"/>
+            <circle cx="220" cy="220" r="192" fill="none"
+                    stroke="url(#roseMetal)" stroke-width="6"
+                    stroke-dasharray="0.6 16.15" opacity=".6"/>
+          </g>
+
+          <g class="ring-b">
+            <circle cx="220" cy="220" r="168" fill="none"
+                    stroke="url(#roseMetalRev)" stroke-width=".85"
+                    stroke-dasharray="3 6" opacity=".68"/>
+          </g>
+
+          <g class="ring-c">
+            <circle cx="220" cy="220" r="140" fill="none"
+                    stroke="url(#roseMetal)" stroke-width="1.25"/>
+          </g>
+
+          <g stroke="rgba(224,162,164,.26)" stroke-width=".5" fill="none">
+            <line x1="220" y1="80" x2="220" y2="360"/>
+            <line x1="80" y1="220" x2="360" y2="220"/>
+            <line x1="121" y1="121" x2="319" y2="319"/>
+            <line x1="319" y1="121" x2="121" y2="319"/>
+            <line x1="96" y1="176" x2="344" y2="264"/>
+            <line x1="96" y1="264" x2="344" y2="176"/>
+            <line x1="176" y1="96" x2="264" y2="344"/>
+            <line x1="264" y1="96" x2="176" y2="344"/>
+          </g>
+
+          <g class="ring-d">
+            <circle cx="220" cy="220" r="100" fill="none"
+                    stroke="url(#roseMetal)" stroke-width=".75"
+                    stroke-dasharray="2 5" opacity=".85"/>
+          </g>
+
+          <g class="core-breathe">
+            <circle cx="220" cy="220" r="72" fill="url(#coreOrb)"/>
+            <circle cx="220" cy="220" r="72" fill="none"
+                    stroke="rgba(253,240,232,.3)" stroke-width=".8"/>
+
+            <g stroke="rgba(253,240,232,.18)" fill="none" stroke-width=".7">
+              <path d="M148 220 Q220 132 292 220"/>
+              <path d="M148 220 Q220 308 292 220"/>
+              <path d="M220 148 Q132 220 220 292"/>
+              <path d="M220 148 Q308 220 220 292"/>
+              <path d="M166 166 Q220 220 274 274"/>
+              <path d="M274 166 Q220 220 166 274"/>
+            </g>
+
+            <circle cx="220" cy="220" r="48" fill="none"
+                    stroke="rgba(242,203,196,.28)" stroke-width=".7"
+                    stroke-dasharray="1.5 4"/>
+
+            <ellipse cx="194" cy="192" rx="22" ry="32" fill="#ffffff" opacity=".2"
+                     transform="rotate(-30 194 192)"/>
+            <ellipse cx="199" cy="197" rx="9" ry="15" fill="#ffffff" opacity=".42"
+                     transform="rotate(-30 199 197)"/>
+          </g>
+
+          <g class="orbit-a">
+            <circle cx="220" cy="22" r="3.6" fill="#f2cbc4"/>
+            <circle cx="418" cy="220" r="2.4" fill="#fdf0e8"/>
+          </g>
+          <g class="orbit-b">
+            <circle cx="220" cy="418" r="3" fill="#e0a2a4"/>
+            <circle cx="22" cy="220" r="2.2" fill="#f2cbc4"/>
+          </g>
+
+          <g fill="url(#roseMetal)">
+            <circle cx="220" cy="20" r="2.6"/>
+            <circle cx="220" cy="420" r="2.6"/>
+            <circle cx="20" cy="220" r="2.6"/>
+            <circle cx="420" cy="220" r="2.6"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="astrolabe-caption">
+        <b>Raw Mineral Art</b>
+        <small>Alberta, Canada • Est. 2021</small>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══════════════ MARQUEE ══════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">
+      Raw Mineral Art <i>✦</i> Alberta, Canada <i>✦</i>
+      Est. 2021 <i>✦</i> Handcrafted Precision <i>✦</i>
+      Raw Crystals <i>✦</i> Custom Wraps <i>✦</i>
+      Private Request <i>✦</i>
+    </div>
+    <div class="marquee-item">
+      Raw Mineral Art <i>✦</i> Alberta, Canada <i>✦</i>
+      Est. 2021 <i>✦</i> Handcrafted Precision <i>✦</i>
+      Raw Crystals <i>✦</i> Custom Wraps <i>✦</i>
+      Private Request <i>✦</i>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ THE CRAFT ══════════════ -->
+<section class="craft" id="craft">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div class="section-num">02</div>
+      <div class="section-head-copy">
+        <p class="eyebrow">The Craft</p>
+        <h2 class="display">Handcrafted <em>Precision.</em></h2>
+      </div>
+    </div>
+
+    <div class="craft-split">
+
+      <div class="craft-copy reveal">
+        <p class="script-block">
+          Founded in 2021, Wires &amp; Stone was created to connect raw mineral
+          beauty with intricate wire wrapping.
+        </p>
+        <p>
+          At Wires &amp; Stone, each piece begins with hand-selected raw
+          crystals. Through delicate wire wrapping, and precise cold tension
+          techniques, every design highlights the natural beauty of the
+          stone(s), and gem(s) chosen, for your own beautiful piece.
+        </p>
+        <p>
+          Specific metallic wire selections, chain styles, and custom gem
+          requests are tailored entirely by private arrangement. Reach out
+          directly to discuss bespoke commissions or special stone wraps.
+        </p>
+
+        <div class="craft-meta">
+          <div>
+            <small>Established</small>
+            <span>2021</span>
+          </div>
+          <div>
+            <small>Based In</small>
+            <span>Alberta, Canada</span>
+          </div>
+          <div>
+            <small>Studio</small>
+            <span>W &amp; S</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="craft-visual reveal">
+        <div class="craft-frame">
+          <svg viewBox="0 0 300 360" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="sr1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#fdf0e8"/>
+                <stop offset="26%"  stop-color="#f2cbc4"/>
+                <stop offset="56%"  stop-color="#e0a2a4"/>
+                <stop offset="82%"  stop-color="#b76e79"/>
+                <stop offset="100%" stop-color="#2e1420"/>
+              </linearGradient>
+              <linearGradient id="sr2" x1="0.3" y1="0" x2="0.7" y2="1">
+                <stop offset="0%"   stop-color="#fdf0e8"/>
+                <stop offset="46%"  stop-color="#e0a2a4"/>
+                <stop offset="100%" stop-color="#8c4a52"/>
+              </linearGradient>
+              <linearGradient id="sr3" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#f2cbc4"/>
+                <stop offset="100%" stop-color="#2e1420"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="150" cy="120" r="66" stroke="url(#sr1)" stroke-width="2.4"/>
+            <circle cx="150" cy="120" r="52" stroke="url(#sr3)" stroke-width="1.2"
+                    stroke-dasharray="4 6"/>
+            <circle cx="150" cy="120" r="34" fill="url(#sr2)" opacity=".35"/>
+
+            <path d="M84 216 q22 -26 44 0 t44 0 t44 0"
+                  stroke="url(#sr1)" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M84 238 q22 -26 44 0 t44 0 t44 0"
+                  stroke="url(#sr1)" stroke-width="2.6" stroke-linecap="round" opacity=".75"/>
+            <path d="M84 260 q22 -26 44 0 t44 0 t44 0"
+                  stroke="url(#sr1)" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>
+
+            <path d="M150 66 l28 28 -28 46 -28-46z" fill="url(#sr2)"/>
+            <path d="M150 66 l28 28 -28 46 -28-46z" stroke="rgba(255,255,255,.65)"
+                  stroke-width="1.2" fill="none"/>
+            <path d="M150 70 L150 132" stroke="rgba(255,255,255,.5)" stroke-width="1"/>
+
+            <g opacity=".9">
+              <path d="M232 168 l2.2 5.4 5.4 2.2 -5.4 2.2 -2.2 5.4 -2.2-5.4 -5.4-2.2 5.4-2.2z"
+                    fill="url(#sr1)"/>
+              <path d="M62 150 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2z"
+                    fill="url(#sr1)"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen reveal">
+        <span class="specimen-node"></span>
+        <span class="specimen-num">Specimen — I</span>
+        <h3>Raw Crystals</h3>
+        <p>Authentic natural mineral points.</p>
+      </div>
+      <div class="specimen reveal">
+        <span class="specimen-node"></span>
+        <span class="specimen-num">Specimen — II</span>
+        <h3>Custom Wraps</h3>
+        <p>Hand-manipulated wire weaving.</p>
+      </div>
+      <div class="specimen reveal">
+        <span class="specimen-node"></span>
+        <span class="specimen-num">Specimen — III</span>
+        <h3>Private Request</h3>
+        <p>Arranged by direct email.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ SPECIMENS — PILLARS ══════════════ -->
+<section class="specimens-section" id="catalog">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div class="monogram"><span>W&amp;S</span></div>
+      <div class="section-head-copy">
+        <p class="eyebrow">Specimens</p>
+        <h2 class="display">Raw Crystals. <em>Custom Wraps.</em></h2>
+      </div>
+    </div>
+
+    <div class="pillar-grid" id="pillarGrid">
+
+      <article class="pillar reveal">
+        <span class="pillar-thread"></span>
+        <p class="pillar-num">Specimen I</p>
+        <div class="pillar-art">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#fdf0e8"/>
+                <stop offset="30%"  stop-color="#f2cbc4"/>
+                <stop offset="62%"  stop-color="#e0a2a4"/>
+                <stop offset="100%" stop-color="#2e1420"/>
+              </linearGradient>
+            </defs>
+            <path d="M24 6 l10 12 -10 24 -10-24z" fill="url(#pg1)"/>
+            <path d="M24 6 l10 12 -10 24 -10-24z" stroke="rgba(255,255,255,.72)"
+                  stroke-width="1" fill="none"/>
+            <path d="M14 18 h20M24 6 v36" stroke="rgba(255,255,255,.5)" stroke-width=".9"/>
+          </svg>
+        </div>
+        <h3>Raw Crystals</h3>
+        <p class="pillar-sub">Specimen I</p>
+        <p class="pillar-body">Authentic natural mineral points.</p>
+        <div class="pillar-foot">
+          <span class="pillar-tag">W &amp; S</span>
+          <span class="pillar-link">Inquire →</span>
+        </div>
+      </article>
+
+      <article class="pillar reveal">
+        <span class="pillar-thread"></span>
+        <p class="pillar-num">Specimen II</p>
+        <div class="pillar-art">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M10 10 Q24 34 38 10" stroke="url(#pg1)" stroke-width="2.6"
+                  stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="5" stroke="url(#pg1)" stroke-width="2.6"/>
+            <path d="M24 29 c5.4 5.4 6.4 11.6 0 16 c-6.4-4.4-5.4-10.6 0-16z" fill="url(#pg1)"/>
+          </svg>
+        </div>
+        <h3>Custom Wraps</h3>
+        <p class="pillar-sub">Specimen II</p>
+        <p class="pillar-body">Hand-manipulated wire weaving.</p>
+        <div class="pillar-foot">
+          <span class="pillar-tag">W &amp; S</span>
+          <span class="pillar-link">Inquire →</span>
+        </div>
+      </article>
+
+      <article class="pillar reveal">
+        <span class="pillar-thread"></span>
+        <p class="pillar-num">Specimen III</p>
+        <div class="pillar-art">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M8 24 a16 16 0 0 1 32 0" stroke="url(#pg1)" stroke-width="2.8"
+                  stroke-linecap="round"/>
+            <circle cx="12" cy="30" r="2.8" fill="url(#pg1)"/>
+            <circle cx="21" cy="35" r="2.8" fill="url(#pg1)"/>
+            <circle cx="32" cy="34" r="2.8" fill="url(#pg1)"/>
+            <circle cx="39" cy="27" r="2.8" fill="url(#pg1)"/>
+          </svg>
+        </div>
+        <h3>Private Request</h3>
+        <p class="pillar-sub">Specimen III</p>
+        <p class="pillar-body">Arranged by direct email.</p>
+        <div class="pillar-foot">
+          <span class="pillar-tag">W &amp; S</span>
+          <span class="pillar-link">Inquire →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALLERY STATUS ══════════════ -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div class="section-num">03</div>
+      <div class="section-head-copy">
+        <p class="eyebrow">Digital Catalog</p>
+        <h2 class="display">Gallery <em>Status.</em></h2>
+      </div>
+    </div>
+
+    <div class="status-panel reveal">
+
+      <div class="status-grid">
+
+        <div class="status-badge">
+          <svg class="status-badge-svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="sb1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#fdf0e8"/>
+                <stop offset="28%"  stop-color="#f2cbc4"/>
+                <stop offset="56%"  stop-color="#e0a2a4"/>
+                <stop offset="82%"  stop-color="#b76e79"/>
+                <stop offset="100%" stop-color="#2e1420"/>
+              </linearGradient>
+              <radialGradient id="sbCore" cx="0.42" cy="0.34" r="0.72">
+                <stop offset="0%"   stop-color="#22102a"/>
+                <stop offset="55%"  stop-color="#0f0518"/>
+                <stop offset="100%" stop-color="#06020a"/>
+              </radialGradient>
+            </defs>
+            <circle cx="100" cy="100" r="94" fill="none" stroke="url(#sb1)" stroke-width="1.6"/>
+            <circle cx="100" cy="100" r="86" fill="none"
+                    stroke="rgba(224,162,164,.28)" stroke-width=".8"/>
+            <g class="status-badge-spin">
+              <circle cx="100" cy="100" r="78" fill="none"
+                      stroke="url(#sb1)" stroke-width="1"
+                      stroke-dasharray="1.5 5"/>
+            </g>
+            <g class="status-badge-spin-rev">
+              <circle cx="100" cy="100" r="58" fill="none"
+                      stroke="rgba(224,162,164,.24)" stroke-width=".8"
+                      stroke-dasharray="6 6"/>
+            </g>
+            <circle cx="100" cy="100" r="52" fill="url(#sbCore)"
+                    stroke="url(#sb1)" stroke-width="1.4"/>
+            <path d="M100 68
+                     l22 9
+                     v18
+                     c0 14 -9.6 23.6 -22 28
+                     c-12.4 -4.4 -22 -14 -22 -28
+                     V77 z"
+                  fill="none" stroke="url(#sb1)" stroke-width="2"
+                  stroke-linejoin="round"/>
+            <path d="M89 96 l7 8 15 -18"
+                  fill="none" stroke="url(#sb1)" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="status-content">
+          <p class="status-kicker">Gallery Under Construction</p>
+          <h3 class="status-title">Work in Progress</h3>
+          <p class="status-sub">The web catalog is currently under construction.</p>
+          <p class="status-copy">
+            The web catalog is currently under construction, while I navigate
+            production of the website. All custom requests and available
+            inventory are managed by private arrangement.
+          </p>
+          <p class="status-copy">
+            To view my beautiful pieces, crystal wraps, and past work, please
+            visit my official Instagram account directly at @wiresandstone.
+          </p>
+          <div class="status-cta">
+            <a href="https://instagram.com/wiresandstone" target="_blank" rel="noopener" class="btn btn-rose">
+              Visit Instagram @wiresandstone
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PRIVATE ARRANGEMENT ══════════════ -->
+<section class="inquiry" id="inquiry">
+  <div class="wrap">
+    <div class="inquiry-card reveal">
+      <p class="eyebrow center">Inquiries</p>
+      <h2 class="display">Private <em>Arrangement.</em></h2>
+      <p class="lede">
+        For custom raw stone wraps, commission details, or private inquiries,
+        please reach out directly via email.
+      </p>
+
+      <div class="inquiry-actions">
+        <a href="mailto:wiresandstone@gmail.com" class="btn btn-rose">
+          Open E-Mail Service
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <button class="btn btn-line" id="copyEmail" type="button">
+          Copy Email Address
+        </button>
+      </div>
+
+      <div class="inquiry-details">
+        <div><small>Direct Email</small><span>wiresandstone@gmail.com</span></div>
+        <div><small>Based In</small><span>Alberta, Canada • Est. 2021</span></div>
+        <div><small>Instagram</small><span>@wiresandstone</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ══  TWO ELITE CREDENTIAL CARDS  ══
+     ═══════════════════════════════════════════════════ -->
+<section class="credentials" aria-label="Credential of storefront assurance">
+
+  <div class="credentials-head reveal">
+    <p class="eyebrow">Credential</p>
+    <h2>Studio &amp; <em>Assurance.</em></h2>
+    <p>System architect, lead engineer, and security infrastructure of record —
+      verified and operating.</p>
+  </div>
+
+  <div class="wrap credentials-grid" id="credentialsGrid">
+
+    <!-- ══ CARD 01 ══ -->
+    <article class="cred reveal" id="cred1">
+      <div class="cred-inner">
+
+        <div class="cred-guilloche" aria-hidden="true"></div>
+        <div class="cred-grid" aria-hidden="true"></div>
+        <div class="cred-sheen" aria-hidden="true"></div>
+
+        <span class="cred-corner cc-tl" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <defs>
+              <linearGradient id="cq1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f2cbc4"/>
+                <stop offset="50%" stop-color="#e0a2a4"/>
+                <stop offset="100%" stop-color="#b76e79"/>
+              </linearGradient>
+            </defs>
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-tr" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-bl" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-br" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+
+        <div class="cred-content">
+
+          <div class="cred-top">
+            <p class="cred-bracket">Lead Architect &amp; Developer</p>
+            <p class="cred-num">01</p>
+          </div>
+
+          <h3 class="cred-headline">Verified<br>Designer</h3>
+
+          <p class="cred-sublabel">
+            System Architect<br>&amp; Lead Engineer
+          </p>
+
+          <div class="cred-rule">
+            <i></i>
+            <b>Designed &amp; Coded</b>
+            <i></i>
+          </div>
+
+          <p class="cred-name">
+            By
+            <strong>Mr. Jaeden Vallée</strong>
+          </p>
+
+          <div class="cred-seal" aria-hidden="true">
+            <span class="cred-seal-glow"></span>
+            <svg viewBox="0 0 200 200" width="100%" height="100%">
+              <defs>
+                <linearGradient id="sealA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"   stop-color="#fdf0e8"/>
+                  <stop offset="22%"  stop-color="#f2cbc4"/>
+                  <stop offset="46%"  stop-color="#e0a2a4"/>
+                  <stop offset="64%"  stop-color="#f0c75e"/>
+                  <stop offset="82%"  stop-color="#b76e79"/>
+                  <stop offset="100%" stop-color="#2e1420"/>
+                </linearGradient>
+                <linearGradient id="sealAInner" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#fdf0e8"/>
+                  <stop offset="48%"  stop-color="#e0a2a4"/>
+                  <stop offset="100%" stop-color="#8c4a52"/>
+                </linearGradient>
+                <radialGradient id="sealACore" cx="0.42" cy="0.34" r="0.72">
+                  <stop offset="0%"   stop-color="#22102a"/>
+                  <stop offset="55%"  stop-color="#0f0518"/>
+                  <stop offset="100%" stop-color="#06020a"/>
+                </radialGradient>
+              </defs>
+
+              <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealA)" stroke-width="2"/>
+              <circle cx="100" cy="100" r="82" fill="none"
+                      stroke="rgba(224,162,164,.3)" stroke-width=".9"/>
+
+              <g class="cred-seal-rot">
+                <circle cx="100" cy="100" r="74" fill="none"
+                        stroke="url(#sealA)" stroke-width="1.2"
+                        stroke-dasharray="1.5 5"/>
+                <circle cx="100" cy="24" r="2" fill="url(#sealAInner)"/>
+              </g>
+
+              <g class="cred-seal-rot-rev">
+                <circle cx="100" cy="100" r="58" fill="none"
+                        stroke="rgba(224,162,164,.22)" stroke-width=".85"
+                        stroke-dasharray="7 6"/>
+              </g>
+
+              <circle cx="100" cy="100" r="50" fill="url(#sealACore)"
+                      stroke="url(#sealA)" stroke-width="1.5"/>
+
+              <g>
+                <path d="M100 70
+                         l22 9
+                         v17
+                         c0 14 -9.6 23.6 -22 28
+                         c-12.4 -4.4 -22 -14 -22 -28
+                         V79 z"
+                      fill="none" stroke="url(#sealAInner)" stroke-width="2"
+                      stroke-linejoin="round"/>
+                <path d="M91 100 l6 7 13 -16"
+                      fill="none" stroke="url(#sealAInner)" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+
+              <circle cx="100" cy="6" r="2.2" fill="url(#sealAInner)"/>
+              <circle cx="194" cy="100" r="1.6" fill="url(#sealAInner)" opacity=".7"/>
+              <circle cx="100" cy="194" r="1.6" fill="url(#sealAInner)" opacity=".7"/>
+              <circle cx="6" cy="100" r="1.6" fill="url(#sealAInner)" opacity=".7"/>
+            </svg>
+          </div>
+
+          <div class="cred-footer">
+            <span class="cred-lockup">W&amp;S / 2026</span>
+            <span class="cred-active">Active</span>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ══ CARD 02 ══ -->
+    <article class="cred reveal" id="cred2">
+      <div class="cred-inner">
+
+        <div class="cred-guilloche" aria-hidden="true"></div>
+        <div class="cred-grid" aria-hidden="true"></div>
+        <div class="cred-sheen" aria-hidden="true"></div>
+
+        <span class="cred-corner cc-tl" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-tr" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-bl" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+        <span class="cred-corner cc-br" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M2 42V15C2 7.3 7.3 2 15 2h27" stroke="url(#cq1)"
+                  stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="15" cy="15" r="2.6" fill="#f2cbc4"/>
+          </svg>
+        </span>
+
+        <div class="cred-content">
+
+          <div class="cred-top">
+            <p class="cred-bracket">Cybersecurity Services</p>
+            <p class="cred-num">02</p>
+          </div>
+
+          <h3 class="cred-headline">Guaranteed<br>Safety</h3>
+
+          <p class="cred-sublabel">
+            Security Infrastructure<br>&amp; Protocol
+          </p>
+
+          <div class="cred-rule">
+            <i></i>
+            <b>Secured By</b>
+            <i></i>
+          </div>
+
+          <p class="cred-name">
+            Security Partner
+            <strong>Vallée Cyber-Defence</strong>
+          </p>
+
+          <div class="cred-seal" aria-hidden="true">
+            <span class="cred-seal-glow"></span>
+            <svg viewBox="0 0 200 200" width="100%" height="100%">
+              <defs>
+                <linearGradient id="sealB" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"   stop-color="#fdf0e8"/>
+                  <stop offset="22%"  stop-color="#f2cbc4"/>
+                  <stop offset="46%"  stop-color="#e0a2a4"/>
+                  <stop offset="64%"  stop-color="#f0c75e"/>
+                  <stop offset="82%"  stop-color="#b76e79"/>
+                  <stop offset="100%" stop-color="#2e1420"/>
+                </linearGradient>
+                <linearGradient id="sealBInner" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#fdf0e8"/>
+                  <stop offset="48%"  stop-color="#e0a2a4"/>
+                  <stop offset="100%" stop-color="#8c4a52"/>
+                </linearGradient>
+                <radialGradient id="sealBCore" cx="0.42" cy="0.34" r="0.72">
+                  <stop offset="0%"   stop-color="#22102a"/>
+                  <stop offset="55%"  stop-color="#0f0518"/>
+                  <stop offset="100%" stop-color="#06020a"/>
+                </radialGradient>
+              </defs>
+
+              <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealB)" stroke-width="2"/>
+              <circle cx="100" cy="100" r="82" fill="none"
+                      stroke="rgba(224,162,164,.3)" stroke-width=".9"/>
+
+              <g class="cred-seal-rot">
+                <circle cx="100" cy="100" r="74" fill="none"
+                        stroke="url(#sealB)" stroke-width="1.2"
+                        stroke-dasharray="1.5 5"/>
+                <circle cx="100" cy="24" r="2" fill="url(#sealBInner)"/>
+              </g>
+
+              <g class="cred-seal-rot-rev">
+                <circle cx="100" cy="100" r="58" fill="none"
+                        stroke="rgba(224,162,164,.22)" stroke-width=".85"
+                        stroke-dasharray="7 6"/>
+              </g>
+
+              <circle cx="100" cy="100" r="50" fill="url(#sealBCore)"
+                      stroke="url(#sealB)" stroke-width="1.5"/>
+
+              <g>
+                <path d="M100 68
+                         l24 10
+                         v20
+                         c0 16 -10.5 26.5 -24 31.5
+                         c-13.5 -5 -24 -15.5 -24 -31.5
+                         V78 z"
+                      fill="none" stroke="url(#sealBInner)" stroke-width="2.2"
+                      stroke-linejoin="round"/>
+                <path d="M100 76
+                         l17 7
+                         v15
+                         c0 11 -7.4 18.4 -17 22
+                         c-9.6 -3.6 -17 -11 -17 -22
+                         V83 z"
+                      fill="rgba(224,162,164,.14)"/>
+                <path d="M91 100 l6.5 7 12 -15"
+                      fill="none" stroke="url(#sealBInner)" stroke-width="2.6"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+
+              <circle cx="100" cy="6" r="2.2" fill="url(#sealBInner)"/>
+              <circle cx="194" cy="100" r="1.6" fill="url(#sealBInner)" opacity=".7"/>
+              <circle cx="100" cy="194" r="1.6" fill="url(#sealBInner)" opacity=".7"/>
+              <circle cx="6" cy="100" r="1.6" fill="url(#sealBInner)" opacity=".7"/>
+            </svg>
+          </div>
+
+          <div class="cred-footer">
+            <span class="cred-lockup">W&amp;S / 2026</span>
+            <span class="cred-active">Active</span>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="Wires & Stone home">
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f2cbc4" stroke-width="1.9"
+                 stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3.4 5 8.6l7 12 7-12z"/>
+              <path d="M5 8.6h14M12 3.4 9 8.6l3 12 3-12z"/>
+            </svg>
+          </span>
+          <span class="logo-text">Wires &amp; Stone<small>Alberta, Canada • Est. 2021</small></span>
+        </a>
+        <p>Bespoke, handcrafted mineral wire art. Hand-wrapped around natural raw
+          crystals and unheated gems. Tailored by private arrangement.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#home">Home</a>
+          <a href="#craft">The Craft</a>
+          <a href="#catalog">Catalog Status</a>
+          <a href="#inquiry">Private Inquiry</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:wiresandstone@gmail.com">Direct Email</a>
+          <a href="https://instagram.com/wiresandstone" target="_blank" rel="noopener">@wiresandstone</a>
+          <a href="#inquiry">Private Commission</a>
+        </div>
+        <div class="footer-col">
+          <h4>Return</h4>
+          <a href="#home" class="back-top">Back to Top →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Wires &amp; Stone. All Rights Reserved.</span>
+      <span>@wiresandstone · wiresandstone@gmail.com</span>
+      <span>Secured by Vallée Cyber-Defence</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
